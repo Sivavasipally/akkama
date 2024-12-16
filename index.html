@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Pickles & Snacks Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Indian Pickles, Powders, and Snacks</h1>
+    </header>
+
+    <!-- List View Section -->
+    <section class="list-view">
+        <h2>Item List</h2>
+
+        <!-- Veg Pickles -->
+        <div class="section">
+            <h3>Veg Pickles</h3>
+            <ul>
+                <li>
+                    <span>Mango Pickle - ₹120</span>
+                    <button onclick="openDetails('Mango Pickle', 'A delicious mango pickle.', 120, 'https://via.placeholder.com/150')">View Details</button>
+                </li>
+                <li>
+                    <span>Lime Pickle - ₹100</span>
+                    <button onclick="openDetails('Lime Pickle', 'A tangy lime pickle.', 100, 'https://via.placeholder.com/150')">View Details</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Non-Veg Pickles -->
+        <div class="section">
+            <h3>Non-Veg Pickles</h3>
+            <ul>
+                <li>
+                    <span>Chicken Pickle - ₹200</span>
+                    <button onclick="openDetails('Chicken Pickle', 'Spicy and flavorful chicken pickle.', 200, 'https://via.placeholder.com/150')">View Details</button>
+                </li>
+                <li>
+                    <span>Prawn Pickle - ₹250</span>
+                    <button onclick="openDetails('Prawn Pickle', 'Delicious prawn pickle.', 250, 'https://via.placeholder.com/150')">View Details</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Cart Summary -->
+    <div class="cart-container">
+        <h2>Cart Summary</h2>
+        <ul id="cart-summary"></ul>
+        <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
+        <button class="submit-button" onclick="submitCart()">Submit Order</button>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup-modal" class="popup-modal">
+        <div class="popup-card">
+            <img id="popup-img" src="" alt="Item Image">
+            <h2 id="popup-name"></h2>
+            <p id="popup-description"></p>
+            <p><strong>Cost: ₹<span id="popup-cost"></span></strong></p>
+            <button id="popup-add-to-cart">Add to Cart</button>
+            <button onclick="closeDetails()">Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
