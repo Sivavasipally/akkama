@@ -90,7 +90,8 @@ function submitCart() {
         let summary = cart.map(item => `${item.name}: ₹${item.price}`).join("\n");
         //alert(`Order Submitted Successfully!\n\nOrder Summary:\n${summary}\n\nTotal: ₹${total}`);
         testaler = urlEncodeText(`Order Summary:\n${summary}\nTotal: ₹${total}`)
-        const url = `https://wa.me/+916305727289/&text=${testaler}`;
+        const url = `https://wa.me/+916305727289/?text=${testaler}`;
+        console.log(url)
         window.open(url, '_blank');
         
         // Clear the cart after submission
