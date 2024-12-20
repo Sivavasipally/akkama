@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation Header -->
     <header class="bg-warning py-3">
@@ -18,7 +20,8 @@
                 </ul>
             </nav>
             <button class="btn btn-outline-dark position-relative" onclick="toggleCartPopup()">
-                🛒 Cart <span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span>
+                🛒 Cart <span id="cart-count"
+                    class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span>
             </button>
         </div>
     </header>
@@ -32,22 +35,371 @@
                 <!-- Veg Pickles -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Veg Pickles
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                         <div class="accordion-body">
-                            <input type="text" class="form-control mb-3" placeholder="Search Veg Pickles..." onkeyup="filterProducts('veg-pickles', this.value)">
+                            <input type="text" class="form-control mb-3" placeholder="Search Veg Pickles..."
+                                onkeyup="filterProducts('veg-pickles', this.value)">
                             <div class="veg-pickles">
                                 <div class="card mb-3">
                                     <div class="card-body">
-                                        <h5 class="card-title">Mango Pickle</h5>
-                                        <p class="card-text">Weight: 500g | Cost: ₹250</p>
-                                        <button class="btn btn-primary" onclick="showProductDetails('Mango Pickle', 'A tangy mango pickle...', '500g', 250)">View Details</button>
-                                        <button class="btn btn-success" onclick="addToCart('Mango Pickle', 250)">Add 1Kg to Cart</button>
+                                        <h5 class="card-title">1. Red Chilli Pickle (పండు మిర్చి పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Red Chilli Pickle', 'A spicy red chilli pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Red Chilli Pickle', 500)">Add 1Kg to Cart</button>
                                     </div>
                                 </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2. Gongura Red Chilli Pickle (పండు గోంగూర పచ్చడి / గోంగూర
+                                            ఎర్ర మిర్చి పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gongura Red Chilli Pickle', 'Gongura with spicy red chilli...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gongura Red Chilli Pickle', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">3. Gongura Pickle (గోంగూర పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gongura Pickle', 'Classic gongura pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Gongura Pickle', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">4. Pulihora Paste (Tamarind Rice Paste) (పులిహోర పేస్ట్)
+                                        </h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Pulihora Paste', 'Tamarind rice paste...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Pulihora Paste', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">5. Pulihora Gongura Paste (పులిహోర గోంగూర పేస్ట్)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Pulihora Gongura Paste', 'Tangy gongura tamarind paste...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Pulihora Gongura Paste', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Add other veg pickles here following the same format -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">6. Ginger Pickle (అల్లం పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Ginger Pickle', 'Fresh ginger pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Ginger Pickle', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">7. Coriander Leaves Pickle (కొత్తిమీర పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Coriander Leaves Pickle', 'Coriander-based spicy pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Coriander Leaves Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 8 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">8. Amaranth Leaves Pickle (తొట కూర పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Amaranth Leaves Pickle', 'Amaranth leaves pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Amaranth Leaves Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 9 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">9. Mint Leaves Pickle (పుదీనా పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mint Leaves Pickle', 'Mint leaves pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Mint Leaves Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 10 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">10. Moringa Leaves Pickle (మూనక్కాయ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Moringa Leaves Pickle', 'Healthy moringa leaves pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Moringa Leaves Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 11 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">11. Tomato Pickle (టమోటా పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Tomato Pickle', 'Tangy tomato pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Tomato Pickle', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 12 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">12. Tomato Brinjal Pickle (టమోటా వంకాయ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Tomato Brinjal Pickle', 'Tomato and brinjal pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Tomato Brinjal Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 13 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">13. Brinjal Pickle (వంకాయ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Brinjal Pickle', 'Classic brinjal pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Brinjal Pickle', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 14 to 29 -->
+                                <!-- Loop Continues -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">14. Lemon Pickle (నిమ్మకాయ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Lemon Pickle', 'Tangy lemon pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Lemon Pickle', 500)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 15 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">15. Lemon Small Pieces Pickle (నిమ్మకాయ చిన్న ముక్కల
+                                            పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Lemon Small Pieces Pickle', 'Lemon pickle with small pieces...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Lemon Small Pieces Pickle', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 16 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">16. Drumstick Pickle (మూనక్కాయ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Drumstick Pickle', 'Healthy drumstick pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Drumstick Pickle', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 17 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">17. Bitter Gourd Pickle (కాకరకాయ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Bitter Gourd Pickle', 'Spicy bitter gourd pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Bitter Gourd Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 18 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">18. Gooseberry Pickle (ఉసిరికాయ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gooseberry Pickle', 'Tangy gooseberry pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gooseberry Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 19 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">19. Gooseberry Salted Pickle (ఉసిరికాయ అవ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gooseberry Salted Pickle', 'Salted gooseberry pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gooseberry Salted Pickle', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 20 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">20. Gooseberry Sesame Seed Pickle (ఉసిరికాయ నువ్వుల
+                                            పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gooseberry Sesame Seed Pickle', 'Gooseberry with sesame seeds...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gooseberry Sesame Seed Pickle', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 21 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">21. Gooseberry Thokku Pickle (ఉసిరికాయ తొక్క పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gooseberry Thokku Pickle', 'Ground gooseberry pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gooseberry Thokku Pickle', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 22 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">22. Mango Pickle (మామిడి అవకాయ)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mango Pickle', 'Traditional mango pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Mango Pickle', 500)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 23 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">23. Mango Slices Pickle (మాగాయ / మామిడి ముక్కల పచ్చడి)
+                                        </h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mango Slices Pickle', 'Sliced mango pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Mango Slices Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 24 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">24. Mango Small Pieces Spicy Pickle (మామిడి చిన్న ముక్కల
+                                            తలింపుపచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mango Small Pieces Spicy Pickle', 'Spicy mango small pieces pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Mango Small Pieces Spicy Pickle', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 25 to 29 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">25. Mango Seed Sesame Pickle (మామిడి కాయ నువ్వుల పచ్చడి)
+                                        </h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mango Seed Sesame Pickle', 'Pickle with mango seed and sesame...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Mango Seed Sesame Pickle', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">26. Small Garlic Pickle (చిన్నీ వెల్లులి / వెల్లులి
+                                            పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Small Garlic Pickle', 'Garlic pickle made with small cloves...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Small Garlic Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">27. Cashew Nut Pickle (జీడిపప్పు పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Cashew Nut Pickle', 'Delicious cashew nut pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Cashew Nut Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">28. Lentil Pickle (కంది ముక్కల పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Lentil Pickle', 'Classic lentil pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Lentil Pickle', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">29. Lentil Whole Pickle (కంది తొక్డు పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Lentil Whole Pickle', 'Delicious lentil whole pickle...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Lentil Whole Pickle', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -55,72 +407,588 @@
                 <!-- Non-Veg Pickles -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Non-Veg Pickles
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
                         <div class="accordion-body">
-                            <input type="text" class="form-control mb-3" placeholder="Search Non-Veg Pickles..." onkeyup="filterProducts('nonveg-pickles', this.value)">
+                            <input type="text" class="form-control mb-3" placeholder="Search Non-Veg Pickles..."
+                                onkeyup="filterProducts('nonveg-pickles', this.value)">
                             <div class="nonveg-pickles">
+                                <!-- Item 1 -->
                                 <div class="card mb-3">
                                     <div class="card-body">
-                                        <h5 class="card-title">Chicken Pickle</h5>
-                                        <p class="card-text">Weight: 500g | Cost: ₹350</p>
-                                        <button class="btn btn-primary" onclick="showProductDetails('Chicken Pickle', 'A spicy chicken pickle...', '500g', 350)">View Details</button>
-                                        <button class="btn btn-success" onclick="addToCart('Chicken Pickle', 350)">Add 1Kg to Cart</button>
+                                        <h5 class="card-title">1. Chicken Bone Pickle (చికెన్ బోన్ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹900</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Chicken Bone Pickle', 'Spicy chicken bone pickle...', '1Kg', 900)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Chicken Bone Pickle', 900)">Add 1Kg to Cart</button>
                                     </div>
                                 </div>
+                                <!-- Item 2 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2. Chicken Boneless Pickle (చికెన్ బొన్లెస్ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1200</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Chicken Boneless Pickle', 'Delicious chicken boneless pickle...', '1Kg', 1200)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Chicken Boneless Pickle', 1200)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">3. Mutton Bone Pickle (మటన్ బోన్ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1600</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mutton Bone Pickle', 'Spicy mutton bone pickle...', '1Kg', 1600)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Mutton Bone Pickle', 1600)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">4. Mutton Boneless Pickle (మటన్ బొన్లెస్ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹2200</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mutton Boneless Pickle', 'Tender mutton boneless pickle...', '1Kg', 2200)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Mutton Boneless Pickle', 2200)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 5 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">5. Gongura Chicken Boneless Pickle (గోంగూర చికెన్
+                                            బొన్లెస్ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1200</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gongura Chicken Boneless Pickle', 'Tangy gongura chicken pickle...', '1Kg', 1200)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gongura Chicken Boneless Pickle', 1200)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 6 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">6. Gongura Mutton Pickle (గోంగూర మటన్ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1600</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gongura Mutton Pickle', 'Tangy gongura mutton pickle...', '1Kg', 1600)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gongura Mutton Pickle', 1600)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 7 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">7. Mutton Keema Pickle (మటన్ కీమా పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹2200</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mutton Keema Pickle', 'Delicious mutton keema pickle...', '1Kg', 2200)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Mutton Keema Pickle', 2200)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 8 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">8. Prawns Pickle (ప్రాంస్ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1400</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Prawns Pickle', 'Spicy prawns pickle...', '1Kg', 1400)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Prawns Pickle', 1400)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 9 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">9. Gongura Prawn Pickle (గోంగూర ప్రాంస్ పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1400</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gongura Prawn Pickle', 'Tangy gongura prawn pickle...', '1Kg', 1400)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gongura Prawn Pickle', 1400)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 10 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">10. Vanjaram Fish Boneless Pickle (వాంజారం ఫిష్ బొన్లెస్
+                                            పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1800</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Vanjaram Fish Boneless Pickle', 'Delicious boneless vanjaram fish pickle...', '1Kg', 1800)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Vanjaram Fish Boneless Pickle', 1800)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 11 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">11. Koraminu Fish Boneless Pickle (కొరామిను ఫిష్ బొన్లెస్
+                                            పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1600</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Koraminu Fish Boneless Pickle', 'Tasty boneless koraminu fish pickle...', '1Kg', 1600)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Koraminu Fish Boneless Pickle', 1600)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 12 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">12. Gongura Nethallu Pickle (గోంగూర నెతల్లు పచ్చడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1200</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gongura Nethallu Pickle', 'Tangy gongura nethallu pickle...', '1Kg', 1200)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Gongura Nethallu Pickle', 1200)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Powders -->
+                <!-- Powders Section -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Powders
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
                         <div class="accordion-body">
-                            <input type="text" class="form-control mb-3" placeholder="Search Powders..." onkeyup="filterProducts('powders', this.value)">
+                            <input type="text" class="form-control mb-3" placeholder="Search Powders..."
+                                onkeyup="filterProducts('powders', this.value)">
                             <div class="powders">
+                                <!-- Item 1 -->
                                 <div class="card mb-3">
                                     <div class="card-body">
-                                        <h5 class="card-title">Chilli Powder</h5>
-                                        <p class="card-text">Weight: 250g | Cost: ₹150</p>
-                                        <button class="btn btn-primary" onclick="showProductDetails('Chilli Powder', 'Authentic chilli powder...', '250g', 150)">View Details</button>
-                                        <button class="btn btn-success" onclick="addToCart('Chilli Powder', 150)">Add 1Kg to Cart</button>
+                                        <h5 class="card-title">1. Moringa Leaves Spice Powder (మూణక్కాయ కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Moringa Leaves Spice Powder', 'Healthy moringa leaves spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Moringa Leaves Spice Powder', 500)">Add 1Kg to
+                                            Cart</button>
                                     </div>
                                 </div>
+                                <!-- Item 2 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2. Curry Leaves Spice Powder (కరివేపాకు కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Curry Leaves Spice Powder', 'Tasty curry leaves spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Curry Leaves Spice Powder', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">3. Bitter Gourd Spice Powder (కాకరకాయ కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Bitter Gourd Spice Powder', 'Nutrient-rich bitter gourd spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Bitter Gourd Spice Powder', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">4. Lentil Powder (పప్పుల పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Lentil Powder', 'Protein-rich lentil powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Lentil Powder', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 5 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">5. Peanut Spice Powder (పల్లీ కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Peanut Spice Powder', 'Delicious peanut spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Peanut Spice Powder', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 6 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">6. Coconut Spice Powder (కొబ్బరి కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Coconut Spice Powder', 'Rich coconut spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Coconut Spice Powder', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 7 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">7. Lentil Gunpowder (కంది కారం పొడి / గన్ పౌడర్ / పరుప్పు
+                                            పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Lentil Gunpowder', 'Classic lentil gunpowder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Lentil Gunpowder', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 8 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">8. Idli Spice Powder (ఇడ్లీ కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Idli Spice Powder', 'Delicious idli spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Idli Spice Powder', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 9 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">9. Coriander Spice Powder (కొత్తిమీర కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Coriander Spice Powder', 'Flavorful coriander spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Coriander Spice Powder', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 10 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">10. Mint Spice Powder (పుదీనా కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Mint Spice Powder', 'Refreshing mint spicepowder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Mint Spice Powder', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 11 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">11. Small Lentil Spice Powder (చిన్న పుట్నాల కారం పొడి)
+                                        </h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Small Lentil Spice Powder', 'Nutritious small lentil spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Small Lentil Spice Powder', 500)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 12 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">12. Garlic Spice Powder (వెల్లులి కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Garlic Spice Powder', 'Delicious garlic spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Garlic Spice Powder', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 13 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">13. Sweet-Spicy Powder (మధుపు కారం)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Sweet-Spicy Powder', 'Perfect balance of sweet and spicy...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Sweet-Spicy Powder', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 14 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">14. Sambar Powder (సాంబార్ పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Sambar Powder', 'Traditional sambar spice blend...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Sambar Powder', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 15 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">15. Sambar Spice (కురా కారం)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Sambar Spice', 'Aromatic curry spice mix...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Sambar Spice', 500)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 16 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">16. Rasam Powder (రసం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Rasam Powder', 'Flavorful rasam spice mix...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Rasam Powder', 500)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 17 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">17. Lentil Powder (కంది పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Lentil Powder', 'Nutrient-rich lentil spice blend...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Lentil Powder', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 18 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">18. Flaxseed Powder (అవిసగింజల పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Flaxseed Powder', 'Healthy flaxseed powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Flaxseed Powder', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 19 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">19. Sesame Spice Powder (నువ్వుల కారం పొడి)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Sesame Spice Powder', 'Delicious sesame spice powder...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Sesame Spice Powder', 500)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 20 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">20. Shrimp Shell Spice Powder (రొయ్యా పోట్టు కారం)</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹600</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Shrimp Shell Spice Powder', 'Unique shrimp shell spice blend...', '1Kg', 600)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Shrimp Shell Spice Powder', 600)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Snacks -->
+                <!-- Snacks Section -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h2 class="accordion-header" id="headingSnacks">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSnacks" aria-expanded="false" aria-controls="collapseSnacks">
                             Snacks
                         </button>
                     </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                    <div id="collapseSnacks" class="accordion-collapse collapse" aria-labelledby="headingSnacks">
                         <div class="accordion-body">
-                            <input type="text" class="form-control mb-3" placeholder="Search Snacks..." onkeyup="filterProducts('snacks', this.value)">
+                            <input type="text" class="form-control mb-3" placeholder="Search Snacks..."
+                                onkeyup="filterProducts('snacks', this.value)">
                             <div class="snacks">
+                                <!-- Item 1 -->
                                 <div class="card mb-3">
                                     <div class="card-body">
-                                        <h5 class="card-title">Murukku</h5>
-                                        <p class="card-text">Weight: 200g | Cost: ₹100</p>
-                                        <button class="btn btn-primary" onclick="showProductDetails('Murukku', 'Crispy and crunchy snack...', '200g', 100)">View Details</button>
-                                        <button class="btn btn-success" onclick="addToCart('Murukku', 100)">Add 1Kg to Cart</button>
+                                        <h5 class="card-title">1. Nalla Nuvvula Laddu - నల్ల నువ్వుల లట్టు</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹400</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Nalla Nuvvula Laddu', 'Traditional sesame seed laddus...', '1Kg', 400)">View
+                                            Details</button>
+                                        <button class="btn btn-success"
+                                            onclick="addToCart('Nalla Nuvvula Laddu', 400)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2. Nethi Ariselu - నెయ్యి అరిసెలు</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Nethi Ariselu', 'Classic ghee ariselu...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Nethi Ariselu', 500)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">3. Manubulu - మనుబులు</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹300</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Manubulu', 'Tasty manubulu snacks...', '1Kg', 300)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Manubulu', 300)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">4. Pappu Chekkalu - పప్పు చెక్కలు</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹300</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Pappu Chekkalu', 'Crunchy lentil chekkalu...', '1Kg', 300)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Pappu Chekkalu', 300)">Add
+                                            1Kg to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 5 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">5. Gavvalu - గవ్వలు</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹300</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Gavvalu', 'Delicious gavvalu snacks...', '1Kg', 300)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Gavvalu', 300)">Add 1Kg to
+                                            Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 6 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">6. Kajjikayalu - కజ్జికాయలు</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹500</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Kajjikayalu', 'Stuffed sweet kajjikayalu...', '1Kg', 500)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Kajjikayalu', 500)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 7 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">7. Ravva Laddu - రవ్వ లట్టు</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹350</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Ravva Laddu', 'Soft ravva laddus...', '1Kg', 350)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Ravva Laddu', 350)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 8 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">8. Poosa Mithai - పూస మిఠాయి</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹400</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Poosa Mithai', 'Sweet poosa mithai...', '1Kg', 400)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Poosa Mithai', 400)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 9 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">9. Sunnundalu - సున్నుండలు</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹600</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Sunnundalu', 'Delicious sunnundalu...', '1Kg', 600)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Sunnundalu', 600)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 10 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">10. Palli Pakam - పల్లీ పాకం</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹400</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Palli Pakam', 'Crunchy peanut pakam...', '1Kg', 400)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Palli Pakam', 400)">Add 1Kg
+                                            to Cart</button>
+                                    </div>
+                                </div>
+                                <!-- Item 11 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">11. Cashew Pakam - జీడిపప్పు పాకం</h5>
+                                        <p class="card-text">Weight: 1Kg | Cost: ₹1000</p>
+                                        <button class="btn btn-primary"
+                                            onclick="showProductDetails('Cashew Pakam', 'Premium cashew pakam...', '1Kg', 1000)">View
+                                            Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Cashew Pakam', 1000)">Add
+                                            1Kg to Cart</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -135,14 +1003,17 @@
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-3">
-                        <img id="product-image" src="images/placeholder.jpg" onerror="if (!this.dataset.errorHandled) { this.src='images/placeholder.jpg'; this.dataset.errorHandled = true; }" alt="Product Image" class="img-fluid rounded" style="max-height: 150px; max-width: 150px;">
+                        <img id="product-image" src="images/placeholder.jpg"
+                            onerror="this.src='images/placeholder.jpg';" alt="Product Image" class="img-fluid rounded"
+                            style="max-height: 150px; max-width: 150px;">
                     </div>
                     <p id="product-description">Product Description</p>
                     <p><strong>Weight:</strong> <span id="product-weight">--</span></p>
                     <p><strong>Cost:</strong> ₹<span id="product-cost">--</span></p>
                     <div class="mb-3">
                         <label for="product-quantity" class="form-label">Quantity:</label>
-                        <input type="number" step="0.01" id="product-quantity" class="form-control w-50 mx-auto" placeholder="Enter quantity" min="0.01" value="1">
+                        <input type="number" step="0.01" id="product-quantity" class="form-control w-50 mx-auto"
+                            placeholder="Enter quantity" min="0.01" value="1">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -177,4 +1048,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
