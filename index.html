@@ -4,347 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anu's Pickles</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Anu's Pickles</h1>
+    <!-- Navigation Header -->
+    <header class="bg-warning py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="text-dark fw-bold m-0">Anu's Pickles</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#shop" class="nav-link text-dark">Shop</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-outline-dark position-relative" onclick="toggleCartPopup()">
+                🛒 Cart <span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span>
+            </button>
+        </div>
     </header>
 
-    <!-- Table View Section -->
-    <section class="list-view">
-        <table class="item-table">
-            <thead>
-                <tr>
-                    <tr>
-                        <th style="width: 40%;">Item Name</th>
-                        <th style="width: 10%;">Weight (Kg)</th>
-                        <th style="width: 10%;">Cost (₹)</th>
-                        <th style="width: 20%;">View Details</th>
-                        <th style="width: 20%;">Add to Cart</th>
-                    </tr>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="section-header">
-                    <td colspan="5"><strong>Vegetable Pickles</strong></td>
-                </tr>
-                <tr>
-                    <td>Red Chilli Pickle (పండు మిర్చి పచ్చడి)</td>
-                    <td>1</td>
-                    <td>₹500</td>
-                    <td><a href="#" onclick="openDetails('Red Chilli Pickle', 'A spicy red chilli pickle.', 500, 'https://raw.githubusercontent.com/Sivavasipally/akkama/refs/heads/main/images/Red%20Chilli%20Pickle.jpg')">View Details</a></td>
-                    <td><a href="#" onclick="addToCart('Red Chilli Pickle', 500)">Add to Cart</a></td>
-                </tr>
-                <tr>
-                    <td>Gongura Red Chilli Pickle (పండు గోంగూర పచ్చడి / గోంగూర ఎర్ర మిర్చి పచ్చడి)</td>
-                    <td>1</td>
-                    <td>₹500</td>
-                    <td><a href="#" onclick="openDetails('Gongura Red Chilli Pickle', 'A tangy gongura red chilli pickle.', 500, 'https://via.placeholder.com/150')">View Details</a></td>
-                    <td><a href="#" onclick="addToCart('Gongura Red Chilli Pickle', 500)">Add to Cart</a></td>
-                </tr>
-                <tr>
-                    <td>Gongura Pickle (గోంగూర పచ్చడి)</td>
-                    <td>1</td>
-                    <td>₹500</td>
-                    <td><a href="#" onclick="openDetails('Gongura Pickle', 'A traditional gongura pickle.', 500, 'https://via.placeholder.com/150')">View Details</a></td>
-                    <td><a href="#" onclick="addToCart('Gongura Pickle', 500)">Add to Cart</a></td>
-                </tr>
-                <tr>
-                    <td>Pulihora Paste (Tamarind Rice Paste) (పులిహోర పేస్ట్)</td>
-                    <td>1</td>
-                    <td>₹500</td>
-                    <td><a href="#" onclick="openDetails('Pulihora Paste', 'A delicious tamarind rice paste.', 500, 'https://via.placeholder.com/150')">View Details</a></td>
-                    <td><a href="#" onclick="addToCart('Pulihora Paste', 500)">Add to Cart</a></td>
-                </tr>
-                <tr>
-                    <td>Pulihora Gongura Paste (పులిహోర గోంగూర పేస్ట్)</td>
-                    <td>1</td>
-                    <td>₹500</td>
-                    <td><a href="#" onclick="openDetails('Pulihora Gongura Paste', 'A tamarind and gongura mix.', 500, 'https://via.placeholder.com/150')">View Details</a></td>
-                    <td><a href="#" onclick="addToCart('Pulihora Gongura Paste', 500)">Add to Cart</a></td>
-                </tr>
- 
-
-        <!-- Non-Veg Pickles -->
-
-    <tr class="section-header">
-        <td colspan="5"><strong>Non-Veg Pickles</strong></td>
-    </tr>
-    <tr>
-        <td>Chicken Bone Pickle (చికెన్ బోన్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹900</td>
-        <td><a href="#" onclick="openDetails('Chicken Bone Pickle', 'Tasty and spicy chicken bone pickle', 900)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Chicken Bone Pickle', 900)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Chicken Boneless Pickle (చికెన్ బొన్లెస్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1200</td>
-        <td><a href="#" onclick="openDetails('Chicken Boneless Pickle', 'Spicy boneless chicken pickle', 1200)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Chicken Boneless Pickle', 1200)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Mutton Bone Pickle (మటన్ బోన్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1600</td>
-        <td><a href="#" onclick="openDetails('Mutton Bone Pickle', 'Delicious mutton bone pickle', 1600)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Mutton Bone Pickle', 1600)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Mutton Boneless Pickle (మటన్ బొన్లెస్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹2200</td>
-        <td><a href="#" onclick="openDetails('Mutton Boneless Pickle', 'Tender and spicy boneless mutton pickle', 2200)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Mutton Boneless Pickle', 2200)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Gongura Chicken Boneless Pickle (గోంగూర చికెన్ బొన్లెస్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1200</td>
-        <td><a href="#" onclick="openDetails('Gongura Chicken Boneless Pickle', 'Tangy gongura and boneless chicken pickle', 1200)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Gongura Chicken Boneless Pickle', 1200)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Gongura Mutton Pickle (గోంగూర మటన్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1600</td>
-        <td><a href="#" onclick="openDetails('Gongura Mutton Pickle', 'Tangy gongura mutton pickle', 1600)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Gongura Mutton Pickle', 1600)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Mutton Keema Pickle (మటన్ కీమా పచ్చడి)</td>
-        <td>1</td>
-        <td>₹2200</td>
-        <td><a href="#" onclick="openDetails('Mutton Keema Pickle', 'Spicy and flavorful mutton keema pickle', 2200)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Mutton Keema Pickle', 2200)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Prawns Pickle (ప్రాంస్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1400</td>
-        <td><a href="#" onclick="openDetails('Prawns Pickle', 'Delicious and spicy prawns pickle', 1400)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Prawns Pickle', 1400)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Gongura Prawn Pickle (గోంగూర ప్రాంస్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1400</td>
-        <td><a href="#" onclick="openDetails('Gongura Prawn Pickle', 'Tangy gongura prawn pickle', 1400)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Gongura Prawn Pickle', 1400)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Vanjaram Fish Boneless Pickle (వాంజారం ఫిష్ బొన్లెస్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1800</td>
-        <td><a href="#" onclick="openDetails('Vanjaram Fish Boneless Pickle', 'Delicious vanjaram fish pickle', 1800)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Vanjaram Fish Boneless Pickle', 1800)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Koraminu Fish Boneless Pickle (కొరామిను ఫిష్ బొన్లెస్ పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1600</td>
-        <td><a href="#" onclick="openDetails('Koraminu Fish Boneless Pickle', 'Delicious boneless koraminu fish pickle', 1600)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Koraminu Fish Boneless Pickle', 1600)">Add to Cart</a></td>
-    </tr>
-    <tr>
-        <td>Gongura Nethallu Pickle (గోంగూర నెతల్లు పచ్చడి)</td>
-        <td>1</td>
-        <td>₹1200</td>
-        <td><a href="#" onclick="openDetails('Gongura Nethallu Pickle', 'Tangy gongura nethallu pickle', 1200)">View Details</a></td>
-        <td><a href="#" onclick="addToCart('Gongura Nethallu Pickle', 1200)">Add to Cart</a></td>
-    </tr>
-    
-                  <!-- Snacks Section -->
-  <tr class="section-header">
-    <td colspan="5"><strong>Spice Powders</strong></td>
-</tr>
-<tr>
-    <td>Moringa Leaves Spice Powder (మూణక్కాయ కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Moringa Leaves Spice Powder', 'Healthy moringa spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Moringa Leaves Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Curry Leaves Spice Powder (కరివేపాకు కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Curry Leaves Spice Powder', 'Flavorful curry leaves powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Curry Leaves Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Bitter Gourd Spice Powder (కాకరకాయ కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Bitter Gourd Spice Powder', 'Nutritious bitter gourd spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Bitter Gourd Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Lentil Powder (పప్పుల పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Lentil Powder', 'Rich lentil spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Lentil Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Peanut Spice Powder (పల్లీ కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Peanut Spice Powder', 'Delicious peanut spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Peanut Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Coconut Spice Powder (కొబ్బరి కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Coconut Spice Powder', 'Tasty coconut spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Coconut Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Lentil Gunpowder (కంది కారం పొడి / గన్ పౌడర్ / పరుప్పు పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Lentil Gunpowder', 'Traditional lentil gunpowder spice', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Lentil Gunpowder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Idli Spice Powder (ఇడ్లీ కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Idli Spice Powder', 'Perfect powder for idlis', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Idli Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Coriander Spice Powder (కొత్తిమీర కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Coriander Spice Powder', 'Aromatic coriander spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Coriander Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Mint Spice Powder (పుదీనా కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Mint Spice Powder', 'Refreshing mint spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Mint Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Small Lentil Spice Powder (చిన్న పుట్నాల కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Small Lentil Spice Powder', 'Tasty small lentil spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Small Lentil Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Garlic Spice Powder (వెల్లులి కారం పొడి)</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Garlic Spice Powder', 'Flavorful garlic spice powder', 500)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Garlic Spice Powder', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Schezwan Sauce (షెడ్వాన్ సాస్)</td>
-    <td>1</td>
-    <td>₹1800</td>
-    <td><a href="#" onclick="openDetails('Schezwan Sauce', 'Spicy and tangy Schezwan sauce', 1800)">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Schezwan Sauce', 1800)">Add to Cart</a></td>
-</tr>
-
-  <!-- Snacks Section -->
-  <tr class="section-header">
-    <td colspan="5"><strong>Snacks (స్నాక్స్)</strong></td>
-</tr>
-<tr>
-    <td>Nalla Nuvvula Laddu - నల్ల నువ్వుల లట్టు</td>
-    <td>1</td>
-    <td>₹400</td>
-    <td><a href="#" onclick="openDetails('Nalla Nuvvula Laddu', 'Healthy black sesame laddus.', 400, 'https://via.placeholder.com/150')">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Nalla Nuvvula Laddu', 400)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Nethi Ariselu - నెయ్యి అరిసెలు</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Nethi Ariselu', 'Ghee-infused traditional ariselu.', 500, 'https://via.placeholder.com/150')">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Nethi Ariselu', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Manubulu - మనుబులు</td>
-    <td>1</td>
-    <td>₹300</td>
-    <td><a href="#" onclick="openDetails('Manubulu', 'Delicious sweet Manubulu.', 300, 'https://via.placeholder.com/150')">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Manubulu', 300)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Pappu Chekkalu - పప్పు చెక్కలు</td>
-    <td>1</td>
-    <td>₹300</td>
-    <td><a href="#" onclick="openDetails('Pappu Chekkalu', 'Crispy and tasty pappu chekkalu.', 300, 'https://via.placeholder.com/150')">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Pappu Chekkalu', 300)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Kajjikayalu - కజ్జికాయలు</td>
-    <td>1</td>
-    <td>₹500</td>
-    <td><a href="#" onclick="openDetails('Kajjikayalu', 'Traditional sweet Kajjikayalu.', 500, 'https://via.placeholder.com/150')">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Kajjikayalu', 500)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Sunnundalu - సున్నుండలు</td>
-    <td>1</td>
-    <td>₹600</td>
-    <td><a href="#" onclick="openDetails('Sunnundalu', 'Rich and nutritious Sunnundalu.', 600, 'https://via.placeholder.com/150')">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Sunnundalu', 600)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Palli Pakam - పల్లీ పాకం</td>
-    <td>1</td>
-    <td>₹400</td>
-    <td><a href="#" onclick="openDetails('Palli Pakam', 'Crunchy and sweet peanut brittle.', 400, 'https://via.placeholder.com/150')">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Palli Pakam', 400)">Add to Cart</a></td>
-</tr>
-<tr>
-    <td>Cashew Pakam - జీడిపప్పు పాకం</td>
-    <td>1</td>
-    <td>₹1000</td>
-    <td><a href="#" onclick="openDetails('Cashew Pakam', 'Sweet and crunchy cashew brittle.', 1000, 'https://via.placeholder.com/150')">View Details</a></td>
-    <td><a href="#" onclick="addToCart('Cashew Pakam', 1000)">Add to Cart</a></td>
-</tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Cart Summary -->
-    <div class="cart-container">
-        <h2>Cart Summary</h2>
-        <table id="cart-table">
-            <thead>
-                <tr>
-                    <th>Item Name</th>
-                    <th>Cost</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="cart-summary"></tbody>
-        </table>
-        <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
-        <button class="submit-button" onclick="submitCart()">Message Order</button>
-    </div>
-
-        <!-- Popup Modal -->
-        <div id="popup-modal" class="popup-modal">
-            <div class="popup-card">
-                <img id="popup-img" src="" alt="Item Image">
-                <h2 id="popup-name"></h2>
-                <p id="popup-description"></p>
-                <p><strong>Cost: ₹<span id="popup-cost"></span></strong></p>
-                <button id="popup-add-to-cart">Add to Cart</button>
-                <button onclick="closeDetails()">Back</button>
+    <!-- Shop Section -->
+    <section id="shop" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Products</h2>
+            <!-- Accordion Pane -->
+            <div class="accordion" id="shopAccordion">
+                <!-- Veg Pickles -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Veg Pickles
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                            <input type="text" class="form-control mb-3" placeholder="Search Veg Pickles..." onkeyup="filterProducts('veg-pickles', this.value)">
+                            <div class="veg-pickles">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mango Pickle</h5>
+                                        <p class="card-text">Weight: 500g | Cost: ₹250</p>
+                                        <button class="btn btn-primary" onclick="showProductDetails('Mango Pickle', 'A tangy mango pickle...', '500g', 250)">View Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Mango Pickle', 250)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Non-Veg Pickles -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Non-Veg Pickles
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                        <div class="accordion-body">
+                            <input type="text" class="form-control mb-3" placeholder="Search Non-Veg Pickles..." onkeyup="filterProducts('nonveg-pickles', this.value)">
+                            <div class="nonveg-pickles">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chicken Pickle</h5>
+                                        <p class="card-text">Weight: 500g | Cost: ₹350</p>
+                                        <button class="btn btn-primary" onclick="showProductDetails('Chicken Pickle', 'A spicy chicken pickle...', '500g', 350)">View Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Chicken Pickle', 350)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Powders -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Powders
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <input type="text" class="form-control mb-3" placeholder="Search Powders..." onkeyup="filterProducts('powders', this.value)">
+                            <div class="powders">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chilli Powder</h5>
+                                        <p class="card-text">Weight: 250g | Cost: ₹150</p>
+                                        <button class="btn btn-primary" onclick="showProductDetails('Chilli Powder', 'Authentic chilli powder...', '250g', 150)">View Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Chilli Powder', 150)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Snacks -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Snacks
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                        <div class="accordion-body">
+                            <input type="text" class="form-control mb-3" placeholder="Search Snacks..." onkeyup="filterProducts('snacks', this.value)">
+                            <div class="snacks">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Murukku</h5>
+                                        <p class="card-text">Weight: 200g | Cost: ₹100</p>
+                                        <button class="btn btn-primary" onclick="showProductDetails('Murukku', 'Crispy and crunchy snack...', '200g', 100)">View Details</button>
+                                        <button class="btn btn-success" onclick="addToCart('Murukku', 100)">Add 1Kg to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
+    <!-- Product Details Popup -->
+    <div id="product-popup" class="modal fade" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="product-name">Product Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img id="product-image" src="images/placeholder.jpg" onerror="if (!this.dataset.errorHandled) { this.src='images/placeholder.jpg'; this.dataset.errorHandled = true; }" alt="Product Image" class="img-fluid rounded" style="max-height: 150px; max-width: 150px;">
+                    </div>
+                    <p id="product-description">Product Description</p>
+                    <p><strong>Weight:</strong> <span id="product-weight">--</span></p>
+                    <p><strong>Cost:</strong> ₹<span id="product-cost">--</span></p>
+                    <div class="mb-3">
+                        <label for="product-quantity" class="form-label">Quantity:</label>
+                        <input type="number" step="0.01" id="product-quantity" class="form-control w-50 mx-auto" placeholder="Enter quantity" min="0.01" value="1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="addToCartFromPopup()">Add to Cart</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Popup -->
+    <div id="cart-popup" class="modal fade" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cart-items" class="list-group"></ul>
+                    <p class="mt-3"><strong>Total: ₹<span id="cart-total">0</span></strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="submitCart()">Submit</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
